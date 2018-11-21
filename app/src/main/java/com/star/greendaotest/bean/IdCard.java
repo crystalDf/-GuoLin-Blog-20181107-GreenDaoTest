@@ -8,8 +8,33 @@ import org.greenrobot.greendao.annotation.Unique;
 public class IdCard {
 
     @Id
-    String mUserName;
+    private String mUserName;
 
     @Unique
-    String mIdNo;
+    private String mIdNo;
+
+    public IdCard(String userName, String idNo) {
+        mUserName = userName;
+        mIdNo = idNo;
+    }
+
+    public IdCard() {
+
+    }
+
+    public String getUserName() {
+        return mUserName;
+    }
+
+    public void setUserName(String userName) {
+        mUserName = userName;
+    }
+
+    public String getIdNo() {
+        return mIdNo;
+    }
+
+    public void setIdNo(String idNo) {
+        mIdNo = idNo;
+    }
 }
