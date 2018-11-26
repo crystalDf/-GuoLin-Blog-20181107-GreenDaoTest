@@ -7,8 +7,42 @@ import org.greenrobot.greendao.annotation.Id;
 public class StudentAndTeacher {
 
     @Id(autoincrement = true)
-    Long mId;
+    private Long mId;
 
-    Long mStudentId;
-    Long mTeacherId;
+    private Long mStudentId;
+    private Long mTeacherId;
+
+    public StudentAndTeacher(Long id, Long studentId, Long teacherId) {
+        mId = id;
+        mStudentId = studentId;
+        mTeacherId = teacherId;
+    }
+
+    public StudentAndTeacher() {
+
+    }
+
+    public Long getId() {
+        return mId;
+    }
+
+    public void setId(Long id) {
+        mId = id;
+    }
+
+    public Long getStudentId() {
+        return mStudentId;
+    }
+
+    public void setStudentId(Long studentId) {
+        mStudentId = studentId;
+    }
+
+    public Long getTeacherId() {
+        return mTeacherId;
+    }
+
+    public void setTeacherId(Long teacherId) {
+        mTeacherId = teacherId;
+    }
 }
