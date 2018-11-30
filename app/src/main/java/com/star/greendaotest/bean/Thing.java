@@ -12,10 +12,19 @@ public class Thing {
 
     @Property(nameInDb="message")
     @Index(unique = true)
-    String message;
+    private String message;
 
-    String name;
+    private String name;
 
     @Transient
-    long time;
+    private long time;
+
+    public Thing(String message, long time) {
+        this.message = message;
+        this.time = time;
+    }
+
+    public Thing() {
+
+    }
 }
