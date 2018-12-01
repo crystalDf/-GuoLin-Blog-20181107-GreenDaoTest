@@ -19,6 +19,12 @@ public class Thing {
     @Transient
     private long time;
 
+    public Thing(Long id, String message, String name) {
+        this.id = id;
+        this.message = message;
+        this.name = name;
+    }
+
     public Thing(String message, long time) {
         this.message = message;
         this.time = time;
