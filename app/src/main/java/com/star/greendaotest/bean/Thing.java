@@ -25,6 +25,12 @@ public class Thing {
         this.name = name;
     }
 
+    public Thing(Long id, String message, long time) {
+        this.id = id;
+        this.message = message;
+        this.time = time;
+    }
+
     public Thing(String message, long time) {
         this.message = message;
         this.time = time;
