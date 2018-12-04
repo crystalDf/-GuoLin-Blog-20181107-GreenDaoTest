@@ -2,6 +2,7 @@ package com.star.greendaotest.bean;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.ToOne;
 import org.greenrobot.greendao.annotation.Unique;
 
 @Entity
@@ -20,6 +21,9 @@ public class Student {
     private String mAddress;
     private String mSchoolName;
     private String mGrade;
+
+    @ToOne(joinProperty = "name")
+    private IdCard mIdCard;
 
     public Student(Long id, int studentNo, int age, String telPhone, String gender,
             String name, String address, String schoolName, String grade) {
