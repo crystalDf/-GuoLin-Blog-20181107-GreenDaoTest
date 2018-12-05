@@ -2,8 +2,11 @@ package com.star.greendaotest.bean;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.ToMany;
 import org.greenrobot.greendao.annotation.ToOne;
 import org.greenrobot.greendao.annotation.Unique;
+
+import java.util.List;
 
 @Entity
 public class Student {
@@ -24,6 +27,9 @@ public class Student {
 
     @ToOne(joinProperty = "name")
     private IdCard mIdCard;
+
+    @ToMany(referencedJoinProperty = "id")
+    private List<CreditCard> mCreditCardList;
 
     public Student(Long id, int studentNo, int age, String telPhone, String gender,
             String name, String address, String schoolName, String grade) {
