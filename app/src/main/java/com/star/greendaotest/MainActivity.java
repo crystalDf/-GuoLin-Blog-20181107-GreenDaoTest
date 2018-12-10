@@ -37,10 +37,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addOtherData(Random random, DaoSession daoSession, String userName, Long id){
+
         IdCard idCard = new IdCard();
         idCard.setUserName(userName);
 //        idCard.setIdNo(RandomValue.getRandomID());
         daoSession.insert(idCard);
+
         for (int j = 0; j < random.nextInt(5) + 1 ; j++) {
             CreditCard creditCard = new CreditCard();
             creditCard.setUserId(id);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             creditCard.setCardNum(String.valueOf(random.nextInt(899999999) + 100000000) + String.valueOf(random.nextInt(899999999) + 100000000));
 //            creditCard.setBank(RandomValue.getBankName());
             creditCard.setCardType(random.nextInt(10));
+
             daoSession.insert(creditCard);
         }
     }
