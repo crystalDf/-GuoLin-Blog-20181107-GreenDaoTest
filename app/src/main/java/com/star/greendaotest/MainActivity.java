@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 //        idCard.setIdNo(RandomValue.getRandomID());
         daoSession.insert(idCard);
 
-        for (int j = 0; j < random.nextInt(5) + 1 ; j++) {
+        for (int i = 0; i < random.nextInt(5) + 1; i++) {
             CreditCard creditCard = new CreditCard();
             creditCard.setUserId(id);
             creditCard.setUserName(userName);
