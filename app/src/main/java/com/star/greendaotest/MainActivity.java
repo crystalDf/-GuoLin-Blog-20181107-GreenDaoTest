@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         daoSession.insert(idCard);
 
         for (int i = 0; i < random.nextInt(5) + 1; i++) {
+
             CreditCard creditCard = new CreditCard();
             creditCard.setUserId(id);
             creditCard.setUserName(userName);
