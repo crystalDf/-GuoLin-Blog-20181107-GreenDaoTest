@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
             CreditCard creditCard = new CreditCard();
             creditCard.setUserId(id);
             creditCard.setUserName(userName);
-            creditCard.setCardNum(String.valueOf(random.nextInt(899999999) + 100000000) + String.valueOf(random.nextInt(899999999) + 100000000));
+            creditCard.setCardNum(
+                    String.valueOf(random.nextInt(899999999) + 100000000) +
+                    String.valueOf(random.nextInt(899999999) + 100000000));
 //            creditCard.setBank(RandomValue.getBankName());
             creditCard.setCardType(random.nextInt(10));
 
