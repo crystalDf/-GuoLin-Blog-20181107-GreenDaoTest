@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         IdCard idCard = new IdCard();
         idCard.setUserName(userName);
 //        idCard.setIdNo(RandomValue.getRandomID());
+
         daoSession.insert(idCard);
 
         for (int i = 0; i < random.nextInt(5) + 1; i++) {
