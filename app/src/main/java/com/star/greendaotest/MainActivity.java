@@ -11,6 +11,7 @@ import com.star.greendaotest.db.DaoSession;
 import java.util.Random;
 
 import androidx.appcompat.app.AppCompatActivity;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this);
     }
 
     private void initGreenDao() {
