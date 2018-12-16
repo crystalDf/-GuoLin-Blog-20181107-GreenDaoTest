@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 this, "greendaotest.db");
         SQLiteDatabase db = helper.getWritableDatabase();
         DaoMaster daoMaster = new DaoMaster(db);
+
         mDaoSession = daoMaster.newSession();
     }
 
